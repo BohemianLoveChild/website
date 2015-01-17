@@ -76,9 +76,11 @@
 	background-position: 50% 50% ;
 	background-repeat: no-repeat ;
 }
+
 :root .mejs-poster img {
 	display: none ;
 }
+
 
 .mejs-poster img {
 	border: 0;
@@ -108,12 +110,14 @@
 }
 
 .no-svg .mejs-overlay-button {
-	background-image: url(bigplay.png);
+	background-image: url(vinny.png);
 }
 
+/*
 .mejs-overlay:hover .mejs-overlay-button {
 	background-position: 0 -100px ;
 }
+*/
 
 .mejs-overlay-loading {
 	position: absolute;
@@ -123,7 +127,7 @@
 	height: 80px;
 	margin: -40px 0 0 -40px;
 	background: #333;
-	background: url(background.png);
+	background: url(vinny.png);
 	background: rgba(0, 0, 0, 0.9);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50,50,50,0.9)), to(rgba(0,0,0,0.9)));
 	background: -webkit-linear-gradient(top, rgba(50,50,50,0.9), rgba(0,0,0,0.9));
@@ -978,6 +982,46 @@ div.mejs-speed-button {
 	line-height: normal;
 	color: #ffffff;
 }
+
+/* added media queries to enlarge controls on bigger screens
+
+@media only screen and (min-width : 1824px) {
+
+  .mejs-container .mejs-controls {
+    height: 60px;
+  }
+    .mejs-container .mejs-controls div {
+      width: 60px;
+      height: 60px;
+    } 
+    .mejs-controls .mejs-time-rail span {
+      height: 40px;
+    }    
+    .mejs-container .mejs-controls .mejs-time {
+      height: 40px;
+    }    
+      .mejs-container .mejs-controls .mejs-time span {
+        font-size: 20px;
+        line-height: 40px;
+      }    
+    .mejs-controls .mejs-button button {
+      width: 46px;
+      height: 46px;
+      background-size: 400px;
+    }    
+      .mejs-controls .mejs-play button {
+      }    
+      .mejs-controls .mejs-pause button {
+        background-position: 0 -44px;
+      }    
+      .mejs-controls .mejs-fullscreen-button button {
+        background-position: -90px 0;
+      }    
+      .mejs-controls .mejs-unfullscreen button {
+        background-position: -90px -44px;
+      }
+}
+*/
 
 /* End: Skip Back */
 

@@ -45,7 +45,9 @@
     <link rel="stylesheet" href="/static/css/app.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
+    
 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
 
@@ -157,10 +159,9 @@
       <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/player/mediaelement-and-player.min.js"></script>
       <script src="/static/javascript/player/mejs-feature-backlight.js"></script>
-      <script src="/static/javascript/player/mejs-feature-share-links.js"></script>
+      <script src="/static/javascript/player/share-links.js"></script>
       <script src="/static/javascript/main.js"></script>
       <!-- endbuild -->
-
       <script>
         $(document).foundation();
       </script>
@@ -195,14 +196,15 @@ jQuery(document).ready(function($) {
 -->
 
 <script>
-$('video, audio').mediaelementplayer({
-    videoVolume: 'horizontal',
+$('video').mediaelementplayer({
+    //videoVolume: 'horizontal',
     features: [
     'playpause',
     'current',
     'progress',
     'volume',
     'fullscreen',
+    //'add_video_share_tools'
     //'backlight'
     ],
     //backlightTimeout: 200
@@ -210,7 +212,7 @@ $('video, audio').mediaelementplayer({
     //function(mediaElement, originalNode) {
     // do things
     //}
-    //success: add_video_share_tools
+    success: add_video_share_tools
 });
 </script>
 
