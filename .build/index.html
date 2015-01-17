@@ -40,8 +40,8 @@
     
 
     <!-- build:css /static/css/minified.css -->
-    <link rel="stylesheet" href="/static/css/mediaelement/mediaelementplayer.css" media="all"/>
-    <link rel="stylesheet" href="/static/css/mediaelement/share-links.css" media="all" />
+    <link rel="stylesheet" href="/static/css/player/mediaelementplayer.css" media="all"/>
+    <link rel="stylesheet" href="/static/css/player/share-links.css" media="all" />
     <link rel="stylesheet" href="/static/css/app.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
@@ -137,7 +137,7 @@
 <div class="row">
   <div class="small-12 column">
     <div class="flex-video widescreen vimeo display-mid">
-      <video width="640" height="360" style="width:100%;height:100%;" id="player1" preload="none">
+      <video width="640" height="360" style="width:100%;height:100%;" id="player1" preload="none" poster="/static/images/angsmn.jpg">
             <source type="video/youtube" src="https://www.youtube.com/watch?v=T5Ap6rkyBHY" controls="controls" title="Kaleidoscope" data-url="aintnobodymusic.com"/>
         </video>
     </div>
@@ -212,11 +212,10 @@
       
 
       <!-- build:js /static/javascript/minified.js -->
-      <script src="/static/javascript/mediaelement/mediaelement-and-player.min.js"></script>
-      <script src="/static/javascript/mediaelement/mejs-feature-backlight.js"></script>
-      <script src="/static/javascript/mediaelement/mejs-feature-share-links.js"></script>
+      <script src="/static/javascript/player/mediaelement-and-player.min.js"></script>
+      <script src="/static/javascript/player/mejs-feature-backlight.js"></script>
+      <script src="/static/javascript/player/mejs-feature-share-links.js"></script>
       <script src="/static/javascript/main.js"></script>
-      
       <!-- endbuild -->
 
       <script>
