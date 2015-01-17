@@ -1,0 +1,26 @@
+// Import Foundation
+  	@import "foundation/settings";
+ 	 @import "foundation";
+
+//Import Display colors for layout markup
+	@import "my/display";
+
+.column{
+	margin-bottom: $gutter;
+}
+
+.align-right{
+	text-align: right;
+}
+
+$crawler-height: rem-calc(50);
+.crawler{
+	height: $crawler-height;
+	font-size: $crawler-height;
+	font-weight: bold;
+	line-height: $crawler-height;
+	color: $dark;
+	
+}
+
+
