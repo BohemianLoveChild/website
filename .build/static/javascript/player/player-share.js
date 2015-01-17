@@ -27,7 +27,7 @@ add_video_share_tools = function( me, video ){
 			links += '<a href="#" rel="nofollow" class="'+key+'">';
 		}
 		
-		$inner.prepend( '<div class="media-content-title">' + $title + '</div>' );
+		//$inner.prepend( '<div class="media-content-title">' + $title + '</div>' );
 		$inner.prepend( '<a her="#" rel="nofollow" class="share-video-link">' + 'Share' + '</a>' );
 		
 		html   = '<div class="share-video-form">';
