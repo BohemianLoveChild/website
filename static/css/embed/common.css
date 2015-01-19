@@ -1,0 +1,360 @@
+body {
+    overflow:hidden;
+    font-size:16px;
+}
+
+button {
+  border:none;
+  border-radius:0;
+  background-color: #666666;
+  color: #FFFFFF;
+  height:3em;
+  padding:0 1em;
+}
+
+button:hover {
+  background-color:#669966;
+}
+
+.vbx-menu {
+    display:block;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+}
+
+.overlay{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0);
+}
+
+.vbx-app-body {
+    font-size:16px;
+    line-height: 1.5;
+    background-color: rgba(0,0,0,0.85);
+    color: white;
+}
+
+.vbx-app-body a, .vbx-app-body a:hover, .vbx-app-body a:visited, .vbx-app-body a:link {
+    color: white;
+}
+
+.vbx-app-body.vbx-light-style a, .vbx-app-body.vbx-light-style a:hover, .vbx-app-body.vbx-light-style a:visited, .vbx-app-body.vbx-light-style a:link {
+    color: black;
+}
+
+.vbx-app-body .vbx-scrollable, .vbx-app-body.vbx-scrollable {
+    padding: 20px;
+}
+
+.vbx-app-body input, .vbx-app-body select, .vbx-app-body button {
+    font-size:16px;
+}
+
+/*.vbx-app-body.touchscreen, .vbx-app-body.touchscreen input, .vbx-app-body.touchscreen select, .vbx-app-body.touchscreen button {
+    font-size:24px;
+}*/
+
+.vbx-app-body .vbx-feed-title{
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.vbx-submit, .vbx-app-body .vbx-submit, .vbx-form-link-button, .vbx-app-body .vbx-form-link-button {
+    background-color: green;
+    color: white;
+    border: none;
+    height: 2em;
+}
+
+.vbx-submit:hover, .vbx-app-body .vbx-submit:hover, .vbx-form-link-button:hover, .vbx-app-body .vbx-form-link-button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.vbx-app-body .instructions {
+    margin-bottom: 1em;
+}
+
+.vbx-app-body .instructions:empty {
+    display:none;
+}
+
+.vbx-form-link-button, .vbx-app-body .vbx-form-link-button {
+    margin-bottom: 1em;
+}
+
+.vbx-form-back-button, .vbx-app-body .vbx-form-back-button {
+    cursor:pointer;
+    margin-bottom:1em;
+}
+
+.vbx-form-back-button:before, .vbx-app-body .vbx-form-back-button:before {
+    content:'Back';
+    text-decoration:underline;
+    font-size:0.8em;
+}
+
+.vbx-menu li {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFFF;
+    padding: 0;
+    list-style-type: none;
+    cursor: pointer;
+    overflow:hidden;
+    white-space:nowrap;
+    height: 32px;
+    margin-bottom:3px;
+}
+
+.vbx-menu li .vbx-menu-label {
+    display:inline-block;
+    padding: 0 0.5em;
+    height: 32px;
+    vertical-align: middle;
+    line-height: 32px;
+}
+
+.vbx-menu li img {
+    display:inline-block;
+    vertical-align: middle;
+    width:32px;
+    height:32px;
+}
+
+/*.touchscreen .vbx-menu li {
+    height: 64px;
+}
+
+.touchscreen .vbx-menu li .vbx-menu-label {
+    font-size: 2em;
+    height: 64px;
+    line-height: 64px;
+}
+
+.touchscreen .vbx-menu li img {
+    width:64px;
+    height:64px;
+}*/
+
+body, .vbx-app-body {
+/*
+    scrollbar-face-color: #636363;
+    scrollbar-3dlight-color: #636363;
+    scrollbar-highlight-color: #636363;
+    scrollbar-arrow-color: #494949;
+    scrollbar-shadow-color: #636363;
+    scrollbar-darkshadow-color: #636363;
+    scrollbar-track-color: #494949;
+*/
+}
+
+::-webkit-scrollbar, .vbx-app-body ::-webkit-scrollbar { width:10px; }
+::-webkit-scrollbar-button, .vbx-app-body ::-webkit-scrollbar-button { width:0; height:0; display:none; }
+::-webkit-scrollbar-track, .vbx-app-body ::-webkit-scrollbar-track { border:none; background-color: rgba(192,192,192,0.25);}
+::-webkit-scrollbar-track-piece, .vbx-app-body ::-webkit-scrollbar-track-piece { border:none; background-color: rgba(192,192,192,0.25); }
+::-webkit-scrollbar-thumb, .vbx-app-body ::-webkit-scrollbar-thumb { background-color: rgba(128,128,128,0.5); border-radius: 0;}
+::-webkit-scrollbar-corner, .vbx-app-body ::-webkit-scrollbar-corner { background-color: none;}
+::-webkit-resizer, .vbx-app-body ::-webkit-resizer { background-color: none;}
+
+video::-webkit-media-controls-overlay-play-button { display:none !important; } /* So video tag will never display its own overlay play button on Android */
+
+#mask {overflow:hidden; position:absolute; left:0;top:0;right:0;bottom:0; }
+
+#background {
+    position:absolute;
+    z-index:0;
+    left:0px;
+    top:0px;
+    right:0px;
+}
+
+#apps1 {
+    display:none;
+}
+.hide-title-bar #apps1 {
+    top:0;
+    height:100%;
+}
+.apps1-item-selected #apps1 {
+    display:block;
+}
+        
+#video1 { position:absolute; left:0; top:0; z-index:0; overflow:hidden;}
+#youtubetouchtrapper {
+    position: absolute;
+    display: none;
+    z-index: 0;
+}
+
+.vjs-default-skin .vjs-live-controls { display:none;}
+.vjs-default-skin .vjs-play-control {width:3em;}
+.vjs-default-skin .vjs-current-time {margin-left:1em;}
+.vjs-default-skin .vjs-quality-button .vjs-menu {margin-bottom: 1.5em;}
+.vjs-default-skin .vjs-quality-button .vjs-menu .vjs-menu-item {color:#FFFFFF;}
+.vjs-default-skin .vjs-quality-button .vjs-menu .vjs-menu-item.vjs-selected {color:#000000; background-color:#D0D0D0;}
+.vjs-default-skin .vjs-quality-button .vjs-menu .vjs-menu-item:hover {color:#000000;}
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.vjs-default-skin .vjs-menu-button ul li:hover, .vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+    -webkit-box-shadow:none;
+    box-shadow: none;
+}
+.video-controls-below #video1 {
+    overflow:visible;
+}
+.video-controls-below .vjs-control-bar {
+    background-color:#000000;
+}
+
+.vjs-default-skin .vjs-control:focus:before, .vjs-default-skin .vjs-control:hover:before {
+    text-shadow: none;
+}
+
+.vjs-default-skin .vjs-slider-handle:before {
+    text-shadow: none;
+}
+
+.vjs-default-skin .vjs-volume-level, .vjs-default-skin .vjs-play-progress { background: #B91F1F;}
+
+
+.vjs-default-skin .vjs-volume-handle.vjs-slider-handle:before {
+    -webkit-transform: scale(1,2);
+    -moz-transform: scale(1,2);
+    -ms-transform: scale(1,2);
+    -o-transform: scale(1,2);
+    transform: scale(1,2);
+}
+
+
+#title1 { position:absolute; left:0; top:0; z-index:1; width:100%; height:40px; background-color:rgba(0, 0, 0, 0.8); display:none;}
+.hide-title-bar #title1 {display:none;}
+.apps1-item-selected #title1 { background-color:rgba(0, 0, 0, 1.0);}
+
+.title {font-size: 1.5em; font-weight: bold; position:relative; left:0.5em; top:0.25em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:20px;}
+.title.has-custom-logo {display:none;}
+
+.custom-logo {
+    display:none;
+}
+.custom-logo.has-custom-logo {
+    display:block; position:relative; left:0em; top:0em; max-height:200px;
+    /*-webkit-transition: width 1s, height 1s; /* Safari and Chrome */
+    /*transition: width 1s, height 1s;*/
+}
+.custom-logo.has-custom-logo.scale-logo-to-title-bar, .apps1-item-selected .custom-logo.has-custom-logo {
+    position:relative; left:0.5em; top:0.25em; height:2em;
+    /*-webkit-transition: width 1s, height 1s; /* Safari and Chrome */
+    /*transition: width 1s, height 1s;*/
+}
+
+.bottom-logo {display:none;}
+.bottom-logo.has-bottom-logo {position:absolute; bottom:0; width:100%; display:block; text-align:center; line-height:0;}
+.show-viewbix-branding .bottom-logo.has-bottom-logo { bottom:8px;}
+.bottom-logo img {max-width:100%;}
+.banner-clickable { cursor: pointer; }
+/*
+    #cta-button {display:none; height: 2em; position:relative; right:0.5em; top:0.25em; padding:0.4em 0.5em 0 0.5em; border-radius:2px; float:right; font-weight: bold; text-decoration:none; cursor:pointer; z-index:2; max-width: 40%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.vbx-show-cta-button #cta-button {display:block;}
+    */
+
+#cta-button {
+    display:none;
+    height: 2em;
+    position:relative;
+    right:0.5em;
+    top:0.25em;
+    padding:0.4em 0.5em 0 0.5em;
+    border-radius:2px;
+    float:right;
+    font-weight: bold;
+    text-decoration:none;
+    cursor:pointer;
+    z-index:2;
+    max-width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.vbx-show-cta-button #cta-button {display:block;}
+
+.share-buttons {float:right; padding-right:5px;}
+.share-button {display:none; position:relative; cursor:pointer; top:0.5em; margin-left:5px; width: 2em; height: 2em;}
+.share-button:hover {background-color:rgba(127,127,127,0.35);}
+.share-button:before {
+    width: 2em;
+    height: 2em;
+    content: "";
+    background-size: 2em;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.share-facebook.show-facebook-button {display:inline-block;}
+.share-facebook:before {
+    background-image:url(/storage/content/icon/svg/t_fb.svg);
+}
+.share-twitter.show-twitter-button {display:inline-block;}
+.share-twitter:before {
+    background-image:url(/storage/content/icon/svg/t_twitter.svg);
+}
+.share-player.show-share-button {display:inline-block;}
+.share-player:before {
+    background-image:url(/storage/content/icon/svg/t_share.svg);
+}
+.fullscreen-button {display:inline-block;}
+.fullscreen-button:before {
+    background-image:url(/storage/content/icon/svg/t_fullscreen.svg);
+}
+
+.ipad .fullscreen-button {display:none;}
+.ie11 .fullscreen-button {display:none;}
+.full-screen-disabled .fullscreen-button {display:none;}
+
+#embed-link-section {display:none;}
+.show-share-button #embed-link-section {display:block;}
+
+#embed-share-section {display:none;}
+.show-facebook-button #embed-share-section {display:block;}
+.show-twitter-button #embed-share-section {display:block;}
+
+#link-text {height:3em; display:block; width:100%; margin-bottom:2em; resize:none;}
+#embed-text {height:12em; display:block; width:100%; margin-bottom:1em; resize:none;}
+
+#menu1 {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    display: none;
+}
+
+#rollPrompt {display:none;}
+.show-roll-prompt #rollPrompt { position:absolute; left:0; top:0; width:100%; height:60px; line-height:60px; background-color:#333333; color:#FFFFFF; display:block; z-index:9998; text-align:center;}
+.show-roll-prompt #rollPrompt:before { 
+    content:attr(data-vbx-roll-prompt);
+}
+/*.touchscreen.show-roll-prompt #rollPrompt { height:120px; line-height:120px; font-size:2em;}*/
+
+#skipLink { 
+    display:none;
+}
+#skipLink .skip-link-divider {
+    color:#666666;
+}
+#skipLink .skip-link-text {
+    color:#1ABC9C;
+    text-decoration:underline;
+    cursor:pointer;
+}
+.show-roll-prompt:not(.gated) #skipLink {
+    display:inline-block;
+}
+
+.viewbix-branding { position:absolute; bottom:0;}

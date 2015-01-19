@@ -70,14 +70,12 @@
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
       <![endif]-->
 
-      <!--
+   
 
-<form action="/search-results/" method="get" data-search-index="false">
- <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
-</form>
--->
+      
+      
 
-<!-- This is the wrap-top portion of off-canvas wrap for navigation.  It requires the wrap-bottom portion to be inserted after whatever will move to reveal navigation. -->
+		<!-- This is the wrap-top portion of off-canvas wrap for navigation.  It requires the wrap-bottom portion to be inserted after whatever will move to reveal navigation. -->
 
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
@@ -130,15 +128,18 @@
 
     <section class="main-section">
 
-      
-      
-
+			
 
 
 
 <div class="row">
   <div class="small-12 column">
     <div class="flex-video widescreen vimeo display-mid">
+
+    <iframe 
+    	style="border: none;" width="398" height="224" src="/test?&w=398&h=224" frameborder="0" scrolling="no" allowTransparency="true" allowfullscreen></iframe>
+-->
+<!--
       <video 
       		width="640" 
       		height="360" 
@@ -147,13 +148,15 @@
       		preload="none" 
       		controls="controls" 
       		data-url="http://www.aintnobodymusic.com"
-      		poster="/static/images/angsmn.jpg">
+      		poster="/static/images/angsmn.jpg"
+      		title="angsmn" 
+      >
             	<source 
             		type="video/youtube" 
             		src="https://www.youtube.com/watch?v=T5Ap6rkyBHY" 
-            		title="Aint Nothing Gonna Stop Me Now" 
             	/>
         </video>
+-->
     </div>
   </div>
 </div>
@@ -208,7 +211,7 @@
 
 
 
-      <!-- This is the bottom portion of off-canvas wrap for navigation.  It requires the top portion to be inserted before whatever will move to reveal navigation. -->
+		<!-- This is the bottom portion of off-canvas wrap for navigation.  It requires the top portion to be inserted before whatever will move to reveal navigation. -->
 
     </section>
 
@@ -216,6 +219,10 @@
 
   </div>
 </div>
+
+	
+
+
 
       
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -281,7 +288,7 @@ $('video').mediaelementplayer({
     //function(mediaElement, originalNode) {
     // do things
     //}
-    success: add_video_share_tools
+    success: add_player_share
 });
 </script>
 

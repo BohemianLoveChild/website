@@ -1,4 +1,4 @@
-add_video_share_tools = function( me, video ){
+add_player_share = function( me, video ){
 	
 	if( video.tagName != 'VIDEO' )
 		return;

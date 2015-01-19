@@ -70,12 +70,12 @@
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
       <![endif]-->
 
-      {% include "templates/partials/header.html" %}
+   
 
-      {# By default, your inner pages will load into this block. #}
-      {% block content %}{% endblock %}
+      {# extend this base to page type bases to add headers, etc #}
+      {% block page_type %}{% endblock %}
 
-      {% include "templates/partials/footer.html" %}
+
 
       {# Foundation JS #}
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -141,7 +141,7 @@ $('video').mediaelementplayer({
     //function(mediaElement, originalNode) {
     // do things
     //}
-    success: add_video_share_tools
+    success: add_player_share
 });
 </script>
 

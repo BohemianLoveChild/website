@@ -1,36 +1,48 @@
-{# ------------------------------------------------------- #}
+{% extends "templates/partials/blank-base.html" %}
+    
+    {% block content %}
 
-{# YOUR HOMEPAGE #}
+        <div 
+            class="video-iframe-container" 
 
-{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
-{# http://paularmstrong.github.io/swig/docs/tags/ #}
+            style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                "
+        >
+            <iframe 
+                id="YouTube" 
+                type="text/html" 
+                width="1920" 
+                height="1080" 
+                frameborder="0" 
+                scrolling="no" 
 
-{# Learn about calling data into Webhook pages here: #}
-{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+                src="
+                    http://www.youtube.com/embed/
 
-{# ------------------------------------------------------- #}
+                    OPf0YbXqDm0
 
-{# Confused what extends and blocks do? Watch a primer: #}
-{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
-{% extends "templates/partials/base.html" %}
+                    ?
+                    &
+                    vq=hd1080
+                    &
+                    rel=0
+                    &
+                    controls=0
+                    "
 
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
-{% block title %}{% parent %} - Homepage{% endblock %}
+                style="
+                    position: absolute; 
+                    top:0; 
+                    left:0; 
+                    width:100%; 
+                    height:100%; 
+                    "
+            >
+            </iframe>
+        </div>
 
-{% block content %}
-
-
-<video width="640" height="360" id="player1" preload="none">
-            <source type="video/youtube" src="http://www.youtube.com/watch?v=Lt6CUH9bVzI" />
-        </video>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-
-    // declare object for video
-    var player = new MediaElementPlayer('#player1');
-
-});
-</script>
-
-{% endblock %}
+    {% endblock %}
