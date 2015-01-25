@@ -63,7 +63,16 @@
 
     
     
+
+	<script>
+		$(function() {
+					var test = $(".embed-social-button");
+					TweenMax.staggerFrom(test, 3, {scale: "0", ease:Elastic.easeOut, delay:1}, 0.3);
+		});
+	</script>
+
   </head>
+
   <body>
     
       <!--[if lt IE 7]>
@@ -93,6 +102,7 @@
       <script src="/static/javascript/player/mediaelement-and-player.min.js"></script>
       <script src="/static/javascript/player/mejs-feature-backlight.js"></script>
       <script src="/static/javascript/player/player-share.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
       <script src="/static/javascript/main.js"></script>
       <!-- endbuild -->
       <script>

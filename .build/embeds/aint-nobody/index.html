@@ -63,7 +63,16 @@
 
     
     
+
+	<script>
+		$(function() {
+					var test = $(".embed-social-button");
+					TweenMax.staggerFrom(test, 3, {scale: "0", ease:Elastic.easeOut, delay:1}, 0.3);
+		});
+	</script>
+
   </head>
+
   <body>
     
       <!--[if lt IE 7]>
@@ -103,7 +112,7 @@
                 allowTransparency="true"
                 allowfullscreen
 
-                src="http://www.youtube.com/embed/q5-QWZjNJWI?wmode=opaque&version=4&vq=hd1080&rel=0&controls=0&showinfo=0&enablejsapi=1"
+                src="http://www.youtube.com/embed/OPf0YbXqDm0?wmode=opaque&version=4&vq=hd1080&rel=0&controls=0&showinfo=0&enablejsapi=1"
 
 
                 style="
@@ -154,7 +163,7 @@
                                 background-image: url('/static/images/vinny-blank.png');
                                 background-size: contain;
                             "
-                        >0
+                        >
                         </div>
                         <div class=" embed-social-button display-ligh"
                             href="http://www.aintnobodymusic.com"
@@ -222,7 +231,7 @@
                             "
                         >
                         </div>
-                        <div class=" embed-social-button display-ligh"
+                        <div class="embed-social-button display-ligh"
                             href="http://www.aintnobodymusic.com"
                             style="
                                 position:relative;
@@ -236,7 +245,7 @@
                             "
                         >
                         </div>
-                        <div class=" embed-social-button display-ligh"
+                        <div class="embed-social-button display-ligh"
                             href="http://www.aintnobodymusic.com"
                             style="
                                 position:relative;
@@ -253,7 +262,6 @@
                     </div>
                 </div>
             </div>
-
 
 
 
@@ -280,6 +288,7 @@
       <script src="/static/javascript/player/mediaelement-and-player.min.js"></script>
       <script src="/static/javascript/player/mejs-feature-backlight.js"></script>
       <script src="/static/javascript/player/player-share.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
       <script src="/static/javascript/main.js"></script>
       <!-- endbuild -->
       <script>
